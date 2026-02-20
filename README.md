@@ -1,4 +1,4 @@
-Smart Task Prioritizer
+** Smart Task Prioritizer **
 
 A full-stack task management application built with Python that automatically ranks tasks using a structured scoring algorithm. The system integrates backend logic, REST APIs, database management, and frontend interaction to deliver a complete productivity solution.
 
@@ -176,3 +176,4 @@ Your Name
 LinkedIn: https://linkedin.com/in/yourprofile
 
 Email: your.email@example.com
+
