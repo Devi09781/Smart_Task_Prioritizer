@@ -1,12 +1,12 @@
-Smart Task Prioritizer *Bold Text*
+Smart Task Prioritizer
 
-A full-stack task management application built with Python that automatically ranks tasks using a structured scoring algorithm. The system integrates backend logic, API design, and frontend presentation to deliver a complete productivity solution.
+A full-stack task management application built with Python that automatically ranks tasks using a structured scoring algorithm. The system integrates backend logic, REST APIs, database management, and frontend interaction to deliver a complete productivity solution.
 
 Overview
 
-Smart Task Prioritizer is a full-stack application designed to automate task ranking based on urgency, importance, deadline proximity, and estimated duration.
+Smart Task Prioritizer is designed to automate task ranking based on urgency, importance, deadline proximity, and estimated duration.
 
-The project demonstrates:
+This project demonstrates:
 
 Backend engineering in Python
 
@@ -14,11 +14,9 @@ RESTful API design
 
 Database integration
 
-Frontend interaction
+Frontend–backend communication
 
-Clean architecture and modular design
-
-It is structured to be scalable, maintainable, and production-ready.
+Scalable and modular architecture
 
 Problem Statement
 
@@ -28,20 +26,25 @@ This project addresses the problem by:
 
 ✓ Automating task ranking using a weighted scoring model
 ✓ Providing a structured backend system for data handling
-✓ Offering a user-friendly frontend interface
-✓ Supporting dynamic updates and real-time recalculation
+✓ Delivering a user-friendly frontend interface
+✓ Supporting real-time priority recalculation
 
 System Architecture
 Backend (Python)
 
-✓ Task data models
-✓ Priority scoring engine
-✓ Feature computation (deadline proximity, duration weighting)
-✓ REST API endpoints
-✓ Database integration
-✓ Input validation and error handling
+Task data models
 
-Possible technologies:
+Priority scoring engine
+
+Feature computation logic
+
+REST API endpoints
+
+Database integration
+
+Input validation and error handling
+
+Possible Technologies:
 
 Flask / Django / FastAPI
 
@@ -51,15 +54,19 @@ SQLite / PostgreSQL
 
 Frontend
 
-✓ User-friendly task creation form
-✓ Dynamic task list rendering
-✓ Sorted priority display
-✓ Responsive UI
-✓ API integration with backend
+Task creation form
 
-Possible technologies:
+Dynamic task list rendering
 
-React / HTML-CSS-JS
+Sorted priority display
+
+Responsive UI
+
+API integration with backend
+
+Possible Technologies:
+
+React / HTML / CSS / JavaScript
 
 Bootstrap / Tailwind
 
@@ -67,22 +74,26 @@ Axios / Fetch API
 
 Database Layer
 
-✓ Persistent task storage
-✓ CRUD operations
-✓ Indexed fields for efficient querying
-✓ Structured schema design
+Persistent task storage
+
+CRUD operations
+
+Efficient querying
+
+Structured schema design
 
 Priority Scoring Model
-
 Priority Score =
 (w1 × Urgency) +
 (w2 × Importance) +
-(w3 × Deadline_Proximity) −
+(w3 × Deadline_Proximity) -
 (w4 × Estimated_Duration)
 
-✓ Configurable weights
-✓ Deterministic and interpretable
-✓ Real-time recalculation upon updates
+Configurable weights
+
+Deterministic and interpretable
+
+Real-time recalculation
 
 Key Features
 
@@ -125,24 +136,10 @@ git clone https://github.com/yourusername/smart-task-prioritizer.git
 cd smart-task-prioritizer
 pip install -r requirements.txt
 python app.py
-Frontend (if separate)
+Frontend
 cd frontend
 npm install
 npm start
-Example Workflow
-
-User creates a task through the UI
-
-Frontend sends request to backend API
-
-Backend computes priority score
-
-Task is stored in database
-
-API returns sorted task list
-
-Frontend renders updated priority order
-
 Engineering Highlights
 
 ✓ Demonstrates full-stack development capabilities
@@ -151,17 +148,16 @@ Engineering Highlights
 ✓ Clear separation of concerns
 ✓ Database-driven application
 ✓ Scalable and extendable design
-✓ Clean code and modular structure
 
 Future Enhancements
 
-✓ Authentication and user accounts
+✓ User authentication and authorization
 ✓ Role-based access control
-✓ Real-time updates using WebSockets
-✓ Deployment with Docker
-✓ CI/CD integration
+✓ WebSocket-based real-time updates
+✓ Docker containerization
+✓ CI/CD pipeline integration
 ✓ Cloud deployment (AWS / Azure / GCP)
-✓ Machine learning–based adaptive prioritization
+✓ Machine learning-based adaptive prioritization
 
 Skills Demonstrated
 
@@ -180,4 +176,3 @@ Your Name
 LinkedIn: https://linkedin.com/in/yourprofile
 
 Email: your.email@example.com
-
