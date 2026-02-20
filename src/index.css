@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Deep indigo-based palette for productivity focus */
+    --background: 220 20% 97%;
+    --foreground: 230 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 12%;
+
+    /* Deep indigo primary */
+    --primary: 234 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft slate secondary */
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 230 25% 25%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    /* Warm amber accent for priorities */
+    --accent: 35 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success green */
+    --success: 160 65% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning amber */
+    --warning: 45 95% 50%;
+    --warning-foreground: 35 100% 15%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 234 85% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(234 85% 55%) 0%, hsl(260 75% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 95% 55%) 0%, hsl(25 95% 50%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(160 65% 45%) 0%, hsl(150 60% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(234 85% 55%) 0%, hsl(280 70% 55%) 50%, hsl(35 95% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(230 25% 12% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(230 25% 12% / 0.08), 0 2px 4px -2px hsl(230 25% 12% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(230 25% 12% / 0.1), 0 4px 6px -4px hsl(230 25% 12% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(230 25% 12% / 0.1), 0 8px 10px -6px hsl(230 25% 12% / 0.05);
+    --shadow-glow: 0 0 40px -10px hsl(234 85% 55% / 0.35);
+
+    /* Priority colors */
+    --priority-high: 0 75% 55%;
+    --priority-medium: 35 95% 55%;
+    --priority-low: 160 65% 45%;
+
+    /* Sidebar */
+    --sidebar-background: 230 25% 10%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 234 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 20% 18%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 230 20% 20%;
+    --sidebar-ring: 234 85% 55%;
+  }
+
+  .dark {
+    --background: 230 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 230 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 234 85% 65%;
+    --primary-foreground: 230 25% 8%;
+
+    --secondary: 230 15% 18%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 230 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 35 95% 55%;
+    --accent-foreground: 35 100% 10%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 60% 50%;
+    --success-foreground: 160 100% 10%;
+
+    --warning: 45 90% 55%;
+    --warning-foreground: 45 100% 10%;
+
+    --border: 230 15% 22%;
+    --input: 230 15% 22%;
+    --ring: 234 85% 65%;
+
+    --gradient-card: linear-gradient(180deg, hsl(230 20% 12%) 0%, hsl(230 25% 10%) 100%);
+    --shadow-glow: 0 0 40px -10px hsl(234 85% 65% / 0.25);
+
+    --sidebar-background: 230 25% 6%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 234 85% 65%;
+    --sidebar-primary-foreground: 230 25% 8%;
+    --sidebar-accent: 230 20% 12%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 230 20% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-success {
+    background-image: var(--gradient-success);
+  }
+
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .priority-high {
+    @apply bg-destructive text-destructive-foreground;
+  }
+
+  .priority-medium {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  .priority-low {
+    @apply bg-success text-success-foreground;
+  }
+
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Decay states */
+  .decay-fresh {
+    @apply border-l-4 border-l-success;
+  }
+
+  .decay-aging {
+    @apply border-l-4 border-l-warning;
+    filter: saturate(0.95);
+  }
+
+  .decay-stale {
+    @apply border-l-4 border-l-accent;
+    filter: saturate(0.85);
+  }
+
+  .decay-critical {
+    @apply border-l-4 border-l-destructive animate-decay-pulse;
+    filter: saturate(0.75);
+  }
+
+  .decay-emergency {
+    @apply border-l-4 border-l-destructive animate-glow-urgent;
+    filter: saturate(0.65) contrast(1.05);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30 transition-colors;
+}
