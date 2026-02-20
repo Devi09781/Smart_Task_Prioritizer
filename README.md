@@ -1,73 +1,182 @@
-# Welcome to your Lovable project
+Smart Task Prioritizer
 
-## Project info
+A full-stack task management application built with Python that automatically ranks tasks using a structured scoring algorithm. The system integrates backend logic, API design, and frontend presentation to deliver a complete productivity solution.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Overview
 
-## How can I edit this code?
+Smart Task Prioritizer is a full-stack application designed to automate task ranking based on urgency, importance, deadline proximity, and estimated duration.
 
-There are several ways of editing your application.
+The project demonstrates:
 
-**Use Lovable**
+Backend engineering in Python
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+RESTful API design
 
-Changes made via Lovable will be committed automatically to this repo.
+Database integration
 
-**Use your preferred IDE**
+Frontend interaction
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Clean architecture and modular design
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+It is structured to be scalable, maintainable, and production-ready.
 
-Follow these steps:
+Problem Statement
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Traditional task managers require manual prioritization, which often leads to inefficiencies and inconsistent decision-making.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+This project addresses the problem by:
 
-# Step 3: Install the necessary dependencies.
-npm i
+✓ Automating task ranking using a weighted scoring model
+✓ Providing a structured backend system for data handling
+✓ Offering a user-friendly frontend interface
+✓ Supporting dynamic updates and real-time recalculation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+System Architecture
+Backend (Python)
 
-**Edit a file directly in GitHub**
+✓ Task data models
+✓ Priority scoring engine
+✓ Feature computation (deadline proximity, duration weighting)
+✓ REST API endpoints
+✓ Database integration
+✓ Input validation and error handling
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Possible technologies:
 
-**Use GitHub Codespaces**
+Flask / Django / FastAPI
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+SQLAlchemy / Django ORM
 
-## What technologies are used for this project?
+SQLite / PostgreSQL
 
-This project is built with:
+Frontend
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+✓ User-friendly task creation form
+✓ Dynamic task list rendering
+✓ Sorted priority display
+✓ Responsive UI
+✓ API integration with backend
 
-## How can I deploy this project?
+Possible technologies:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+React / HTML-CSS-JS
 
-## Can I connect a custom domain to my Lovable project?
+Bootstrap / Tailwind
 
-Yes, you can!
+Axios / Fetch API
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Database Layer
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+✓ Persistent task storage
+✓ CRUD operations
+✓ Indexed fields for efficient querying
+✓ Structured schema design
+
+Priority Scoring Model
+
+Priority Score =
+(w1 × Urgency) +
+(w2 × Importance) +
+(w3 × Deadline_Proximity) −
+(w4 × Estimated_Duration)
+
+✓ Configurable weights
+✓ Deterministic and interpretable
+✓ Real-time recalculation upon updates
+
+Key Features
+
+✓ Full CRUD operations (Create, Read, Update, Delete)
+✓ Automated priority ranking
+✓ RESTful API endpoints
+✓ Persistent database storage
+✓ Modular backend architecture
+✓ Frontend–backend integration
+✓ Clean and maintainable codebase
+✓ Unit-tested scoring logic
+
+Project Structure
+smart-task-prioritizer/
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── scoring/
+│   └── app.py
+│
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   └── assets/
+│
+├── tests/
+├── requirements.txt
+└── README.md
+API Endpoints (Example)
+Method	Endpoint	Description
+GET	/tasks	Retrieve all tasks (sorted by priority)
+POST	/tasks	Create new task
+PUT	/tasks/{id}	Update task
+DELETE	/tasks/{id}	Delete task
+Installation
+Backend
+git clone https://github.com/yourusername/smart-task-prioritizer.git
+cd smart-task-prioritizer
+pip install -r requirements.txt
+python app.py
+Frontend (if separate)
+cd frontend
+npm install
+npm start
+Example Workflow
+
+User creates a task through the UI
+
+Frontend sends request to backend API
+
+Backend computes priority score
+
+Task is stored in database
+
+API returns sorted task list
+
+Frontend renders updated priority order
+
+Engineering Highlights
+
+✓ Demonstrates full-stack development capabilities
+✓ Strong backend architecture in Python
+✓ API-first design approach
+✓ Clear separation of concerns
+✓ Database-driven application
+✓ Scalable and extendable design
+✓ Clean code and modular structure
+
+Future Enhancements
+
+✓ Authentication and user accounts
+✓ Role-based access control
+✓ Real-time updates using WebSockets
+✓ Deployment with Docker
+✓ CI/CD integration
+✓ Cloud deployment (AWS / Azure / GCP)
+✓ Machine learning–based adaptive prioritization
+
+Skills Demonstrated
+
+✓ Full Stack Development
+✓ Python Backend Engineering
+✓ REST API Design
+✓ Database Modeling
+✓ Frontend Integration
+✓ Clean Architecture
+✓ Testing and Debugging
+✓ Scalable System Design
+
+Author
+
+Your Name
+LinkedIn: https://linkedin.com/in/yourprofile
+
+Email: your.email@example.com
